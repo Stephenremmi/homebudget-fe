@@ -13,11 +13,19 @@ function App() {
   return (
     <GlobalProvider>
       <Header />
-      <div className="container">
-        <Balance />
-        <IncomeExpenses />
-        <TransactionList />
-        <AddTransaction />
+      <div style={{ display: "flex", gap: "5rem" }}>
+        <div className="container">
+          <Balance />
+          <IncomeExpenses showIncome />
+          <TransactionList />
+          <AddTransaction />
+        </div>
+        <div className="container">
+          <Balance />
+          <IncomeExpenses showExpense />
+          <TransactionList />
+          <AddTransaction />
+        </div>
       </div>
     </GlobalProvider>
   );
